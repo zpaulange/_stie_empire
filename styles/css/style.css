@@ -53,6 +53,9 @@ GENERAL
   font-family: "Montserrat-Medium", sans-serif;
   line-height: 1.5rem;
   color: #000;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
 }
 
 body {
@@ -63,7 +66,7 @@ a {
   transition: all 0.3s ease-in;
 }
 
-a:hover, a:focus, a:active {
+a, a:hover, a:focus, a:active {
   text-decoration: none;
 }
 
@@ -110,6 +113,7 @@ h1.h1, h1 {
 h2.h2, h2 {
   font-size: 30px;
   font-family: "Calistoga-Regular", sans-serif;
+  text-align: center;
 }
 @media (min-width: 992px) {
   h2.h2, h2 {
@@ -193,6 +197,12 @@ input {
 
 .slick-dots > li > button:before {
   display: none;
+}
+.container{
+  max-width:1140px;
+  margin: 0 auto;
+  padding-left:15px;
+  padding-right:15px;
 }
 
 /*------------------------------
@@ -654,6 +664,12 @@ crumb
 .crumb__content {
   padding-top: 8px;
   padding-bottom: 8px;
+}
+.crumb__list{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 .crumb__list li + li {
   display: inline-block;
@@ -2444,6 +2460,9 @@ actuality
     width: calc(100% - 265px);
     padding-left: 15px;
   }
+}
+.p-actuality__right h2{
+  text-align: left;
 }
 .p-actuality__list {
   margin-top: 25px;
