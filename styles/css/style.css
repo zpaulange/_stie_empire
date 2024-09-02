@@ -114,6 +114,7 @@ h2.h2, h2 {
   font-size: 30px;
   font-family: "Calistoga-Regular", sans-serif;
   text-align: center;
+  line-height: 2.2rem;
 }
 @media (min-width: 992px) {
   h2.h2, h2 {
@@ -2104,6 +2105,10 @@ about
 }
 .country__text {
   text-align: center;
+  color:#fff;
+}
+.country__text  *{
+  color:#fff;
 }
 .country__text p {
   margin-top: 30px;
