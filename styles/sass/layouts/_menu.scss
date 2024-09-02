@@ -1,0 +1,71 @@
+/*------------------------------
+menu
+------------------------------*/
+.menu{
+    @include flex();
+
+    &__item{
+        @include flex();
+        a{
+            font-size:15px;
+            margin-right:35px;
+            display:block;
+            white-space: nowrap;
+            color:$blanc;
+            &:before, &:after{
+                position: absolute;
+                width: 100%;
+                height: 1.6px;
+                top: 100%;
+                left: 0;
+                background: currentColor;
+                background-color: $orange;
+            }
+            &:before{
+                content:"";
+                transform-origin: 100% 50%;
+                transform: scale3d(0, 1, 1);
+                transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+            }
+            &:after{
+                content: '';
+                top: calc(100% - 4px);
+                transform-origin: 0% 50%;
+                transform: scale3d(0, 1, 1);
+                transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+            }
+            &:hover:before{
+                transform-origin: 0% 50%;
+                transform: scale3d(1,1,1);
+                transition-timing-function: cubic-bezier(0.4, 1, 0.8, 1);
+            }
+            &:hover:after{
+                transform-origin: 100% 50%;
+                transform: scale3d(1, 1, 1);
+                transition-timing-function: cubic-bezier(0.4, 1, 0.8, 1);
+            }
+        }
+        &.active a{
+            &:before{
+                transform-origin: 0% 50%;
+                transform: scale3d(1,1,1);
+                transition-timing-function: cubic-bezier(0.4, 1, 0.8, 1);
+            }
+            &:after{
+                transform-origin: 100% 50%;
+                transform: scale3d(1, 1, 1);
+                transition-timing-function: cubic-bezier(0.4, 1, 0.8, 1);
+            }
+        }
+        &:last-child{
+            a{
+                margin-right:0;
+            }
+
+        }
+    }
+}
+
+/*------------------------------
+end menu
+------------------------------*/

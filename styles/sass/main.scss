@@ -1,0 +1,27 @@
+//abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+
+//layouts
+@import 'layouts/reset';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/menu';
+@import 'layouts/crumb';
+
+//bases
+@import 'bases/block-animation';
+@import 'bases/text-animation';
+@import 'bases/form';
+@import 'bases/sidebar';
+@import 'bases/pagination';
+
+//pages
+@import 'pages/home';
+@import 'pages/abouts';
+@import 'pages/contacts';
+@import 'pages/actuality';
+@import 'pages/events';
+@import 'pages/offers';
+@import 'pages/404';

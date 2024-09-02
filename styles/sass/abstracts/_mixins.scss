@@ -1,0 +1,19 @@
+@mixin flex($wrap:wrap,$justify:space-between, $align:center){
+    display:flex;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin button($pd:10px 20px, $bg:$orange, $cl:$blanc, $rd:35px ){
+    text-transform: capitalize;
+    padding:$pd;
+    background-color:$orange;
+    color:$cl;
+    border:1px solid $orange;
+    border-radius:$rd;
+    white-space: nowrap;
+    &:hover{
+        box-shadow: 0 0 25px #ff910e91;
+    }
+} 

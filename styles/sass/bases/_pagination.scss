@@ -1,0 +1,43 @@
+/*------------------------------
+pagination
+------------------------------*/
+.pagination{
+    @include flex($justify:center);
+    &__item{
+        
+        &-prev, &-next a{
+            display:inline-block;
+            height:50px;
+            width:50px;
+            @include flex($justify:center);
+            background-color:$orange;
+            border-radius: 50%;
+            span{
+                color:$blanc;
+                font-size: 2rem;
+                &:before{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            &:hover{
+                background-color:$noir3;
+            }
+        }
+        &-count span{
+            font-size:16px;
+            font-family: 'Montserrat-Regular', sans-serif;
+            font-weight: 700;
+            margin:0 5px;
+        }
+    }
+    li + li {
+        margin-left:45px;
+    }
+}
+
+/*------------------------------
+end pagination
+------------------------------*/

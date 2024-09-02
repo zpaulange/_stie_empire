@@ -1,0 +1,176 @@
+.p-events-top{
+    background-color:$cendre2;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+    &__content{
+        padding-top:55px;
+        padding-bottom: 55px;
+        &:before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:50%;
+            transform:translateX(-50%);
+            width:100%;
+            height:100%;
+            background-image: url(../../images/event-bg1.svg);
+            background-position: center top;
+            background-repeat:no-repeat;
+            background-size: contain;
+            @media (max-width:767px){
+                background-position: center 60px;
+            }
+        }
+    }
+    &__slide{
+        max-width:300px;
+        margin:50px auto 30px auto;
+        .slick-arrow{
+            display:none !important;
+        }
+        .slick-list{
+            overflow: visible;
+        }
+        .slick-dots{
+            bottom:-45px;
+        }
+        @media (min-width:575px){
+            max-width:350px;
+        }
+        @media (min-width:768px){
+            max-width:400px;
+        }
+        @media (min-width:992px){
+            max-width:530px;
+        }
+        @media (min-width:1200px){
+            max-width:660px;
+        }
+    }
+    &__item{
+        height:370px;
+        overflow: hidden;
+        padding-top:85px;
+        opacity: .2;
+        &.slick-center{
+            padding-top:0 !important;
+            opacity:1 !important;
+        }
+        a{
+            display:block;
+            height:100%;
+            width:100%;
+            img{
+                height:100%;
+                width:100%;
+                object-fit: cover;
+            }
+        }
+        @media (max-width:991px){
+            height:300px;
+            padding-top:50px;
+        }
+
+        @media (max-width:767px){
+            height:270px;
+            padding-top:50px;
+        }
+    }
+}
+
+.p-events-bottom{
+    z-index: -1;
+    &__line{
+        position:absolute;
+        z-index:1;
+        @media (max-width:991){
+            width: 150px;
+        }
+    }
+    &__line1{
+        bottom:0;
+        left:0;
+    }
+    &__line2{
+        top:0;
+        right:0;
+    }
+    &__content{
+        padding-top:60px;
+        padding-bottom:60px;
+    }
+    &__box{
+        margin-top:50px;
+        @media (min-width:992px){
+            @include flex($wrap:nowrap, $justify:start, $align:start);
+        }
+    }
+    &__right{
+        @media (min-width:992px){
+            width: calc(100% - 265px);
+            padding-left:15px;
+        }
+    }
+    &__navFilter{
+        @include flex($wrap:nowrap);
+        background-color:$cendre2;
+        border-radius:3px;
+        overflow: hidden;
+        height:40px;
+        padding-right:15px;
+        padding-left:15px;
+        p{
+            margin-bottom:0;
+            font-size:12px;
+            font-family: "Montserrat-SemiBold",sans-serif;
+            color:$noir3;
+            line-height: 23px;
+        }
+    }
+    &__filter{
+        select{
+            background-color:$blanc;
+            border-radius:35px;
+            height:30px;
+            width:105px;
+            border:1px solid $cendre;
+            font-size:13px;
+            font-family: "Montserrat-Regular",sans-serif;
+            font-weight: 500;
+            color:$noir3;
+            padding-left:10px;
+            // -webkit-appearance: none;
+            // appearance: none;
+            // &:after{
+            //     content:"";
+            //     position:absolute;
+            //     top:50%;
+            //     transform: translateY(-50%) rotate(90deg);
+            //     right:5px;
+            //     height:18px;
+            //     width:18px;
+            //     background-image: url(../../images/arrow-crumb.svg);
+            //     background-repeat: no-repeat;
+            //     background-size: cover;
+            //     background-position: center;
+            // }
+        }
+    }
+    &__list{
+        margin-top:25px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 12px;
+        @media (max-width:767px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width:450px){
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    &__item{
+        margin:0;
+    }
+    &__pagination{
+        margin-top:55px;
+    }
+}

@@ -1,0 +1,38 @@
+/*------------------------------
+crumb
+------------------------------*/
+.crumb{
+
+    &__content{
+        padding-top:8px;
+        padding-bottom:8px;
+    }
+    &__list li + li{
+        display:inline-block;
+        padding-left:26px;
+        &:before{
+            content:"";
+            position:absolute;
+            top:50%;
+            transform:translateY(-50%);
+            left:3px;
+            height:18px;
+            width:18px;
+            background-image: url(../../images/arrow-crumb.svg);
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-position:center;
+        }
+    }
+    &__item{
+        color:$orange;
+        font-size:15px;
+        a{
+            font-size:15px;
+            color:$noir;
+        }
+    }
+}
+/*------------------------------
+end crumb
+------------------------------*/

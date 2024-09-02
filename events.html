@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--jquery-->    
+        <script src="./libs/jquery/jquery-min.js"></script>
+        <!--bootstrap css-->
+        <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
+        <!--material css-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
+        <!--aos css-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!--slick css-->
+        <link rel="stylesheet" href="./libs/slik/css/slick.css">
+        <!--style css-->
+        <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+        <link rel="stylesheet" href="styles/css/style.css">
+        <title>Évènement</title>
+    </head>
+    <body>
+        
+        <!--wrapper-->
+        <div class="wrapper">
+            <!--header-->
+            <header class="header">
+                <div class="container">
+                    <div class="row">
+                        <div class="header__content col-lg-12 col-md-12 col-sm-12">
+                            <a href="index.html" class="header__left">
+                                <img src="images/logo_header.svg" alt="logo">
+                            </a>
+                            <div class="header__center">
+                                <ul class="header__menu menu">
+                                    <li class="menu__item"><a href="index.html">Accueil</a></li>
+                                    <li class="menu__item"><a href="actuality.html">Actualités</a></li>
+                                    <li class="menu__item active"><a href="events.html">Évènement</a></li>
+                                    <li class="menu__item"><a href="offers.html">Offres</a></li>
+                                    <li class="menu__item"><a href="about.html">A propos</a></li>
+                                    <li class="menu__item"><a href="contacts.html">Contacts</a></li>
+                                </ul>
+                            </div>
+                            <div class="header__right">
+                                <a href="#">consultation</a>
+                            </div>
+                            <a href="#" class="header__btnClose js-btn-menu"><span></span></a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!--main-->
+            <main class="main">
+
+                <!--crumb-->
+                <section class="crumb bg-cendre">
+                    <div class="container">
+                        <div class="row">
+                            <div class="crumb__content col-lg-12 col-md-12 col-sm-12">
+                                <ul class="crumb__list d-flex flex-wrap align-items-center justify-content-start">
+                                    <li class="crumb__item"><a href="index.html">Accueil</a></li>
+                                    <li class="crumb__item"><a href="events.html">Évènement</a></li>
+                                    <li class="crumb__item">Empire night-club</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- p-events-top-->
+                <section class="p-events-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="p-events-top__content col-lg-12 col-md-12 col-sm-12">
+                                <h2 class="h2 text-center">Évènement en approche</h2>
+                                <div class="p-events-top__slide js-slide-currentEnvent">
+                                    <div class="p-events-top__item">
+                                        <a href="#" class="p-events-top__currentEvent">
+                                            <img src="images/p4.jpg" alt="current-event">
+                                        </a>
+                                    </div>
+                                    <div class="p-events-top__item">
+                                        <a href="#" class="p-events-top__currentEvent">
+                                            <img src="images/p1.jpg" alt="current-event">
+                                        </a>
+                                    </div>
+                                    <div class="p-events-top__item">
+                                        <a href="#" class="p-events-top__currentEvent">
+                                            <img src="images/p2.jpg" alt="current-event">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- p-events-bottom --> 
+                <section class="p-events-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="p-events-bottom__content col-lg-12 col-md-12 col-sm-12">
+                                <h2 class="h2 text-center">Nos évènements passés</h2>
+                                <div class="p-events-bottom__box">
+                                    <aside class="p-events-bottom__aside sidebar">
+                                        <div class="sidebar__content">
+                                            <div class="sidebar__title">
+                                                FILIALES
+                                                <a href="#"><span class="mdi mdi-close js_btn-sidebar"></span></a>
+                                            </div>
+                                            <ul class="sidebar__list">
+                                                <li class="sidebar__item active">
+                                                    <a href="#">
+                                                        Empire restaurant<span">(12)</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar__item">
+                                                    <a href="#">
+                                                        Empire night-club<span>(12)</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar__item">
+                                                    <a href="#">
+                                                        Empire hotelerie<span>(12)</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar__item">
+                                                    <a href="#">
+                                                        Empire technologie<span>(12)</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar__item">
+                                                    <a href="#">
+                                                        Empire cave a vin<span>(12)</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar__item">
+                                                    <a href="#">
+                                                        Empire restaurant<span>(12)</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar__item">
+                                                    <a href="#">
+                                                        Empire restaurant<span>(12)</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar__item">
+                                                    <a href="#">
+                                                        Empire restaurant<span>(12)</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar__item">
+                                                    <a href="#">
+                                                        Empire restaurant<span>(12)</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar__item">
+                                                    <a href="#">
+                                                        Empire restaurant<span>(12)</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar__item">
+                                                    <a href="#">
+                                                        Empire restaurant<span>(12)</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar__item">
+                                                    <a href="#">
+                                                        Empire restaurant<span>(12)</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar__item">
+                                                    <a href="#">
+                                                        Empire restaurant<span>(12)</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar__item">
+                                                    <a href="#">
+                                                        Empire restaurant<span>(12)</span>
+                                                    </a>
+                                                </li>
+                                                <li class="sidebar__item">
+                                                    <a href="#">
+                                                        Empire restaurant<span>(12)</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </aside>
+                                    <div class="p-events-bottom__right">
+                                        <div class="p-events-bottom__navFilter">
+                                            <a href="#" class="btn-menu-sidebar js_btn-sidebar"><span class="mdi mdi-menu"></span></a>
+                                            <P>TRIER PAR ANNEE</P>
+                                            <form action="" class="p-events-bottom__filter">
+                                                <select name="events_filter" >
+                                                    <option value="2021">2021</option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                        <div class="p-events-bottom__list">
+                                            <div class="p-events-bottom__item items-events">
+                                                <a href="#">
+                                                    <img src="images/e4.jpg" alt="events">
+                                                </a>
+                                            </div>
+                                            <div class="p-events-bottom__item items-events">
+                                                <a href="#">
+                                                    <img src="images/e4.jpg" alt="events">
+                                                </a>
+                                            </div>
+                                            <div class="p-events-bottom__item items-events">
+                                                <a href="#">
+                                                    <img src="images/e4.jpg" alt="events">
+                                                </a>
+                                            </div>
+                                            <div class="p-events-bottom__item items-events">
+                                                <a href="#">
+                                                    <img src="images/e4.jpg" alt="events">
+                                                </a>
+                                            </div>
+                                            <div class="p-events-bottom__item items-events">
+                                                <a href="#">
+                                                    <img src="images/e4.jpg" alt="events">
+                                                </a>
+                                            </div>
+                                            <div class="p-events-bottom__item items-events">
+                                                <a href="#">
+                                                    <img src="images/e4.jpg" alt="events">
+                                                </a>
+                                            </div>
+                                            <div class="p-events-bottom__item items-events">
+                                                <a href="#">
+                                                    <img src="images/e4.jpg" alt="events">
+                                                </a>
+                                            </div>
+                                            <div class="p-events-bottom__item items-events">
+                                                <a href="#">
+                                                    <img src="images/e4.jpg" alt="events">
+                                                </a>
+                                            </div>
+                                            <div class="p-events-bottom__item items-events">
+                                                <a href="#">
+                                                    <img src="images/e4.jpg" alt="events">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="p-events-bottom__pagination">
+                                            <ul class="pagination">
+                                                <li class="pagination__item pagination__item-prev">
+                                                    <a href="#"><span class="mdi mdi-arrow-left"></span></a>
+                                                </li>
+                                                <li class="pagination__item pagination__item-count">
+                                                    <span>1</span>/<span>5</span>
+                                                </li>
+                                                <li class="pagination__item pagination__item-next">
+                                                    <a href="#"><span class="mdi mdi-arrow-right"></span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-events-bottom__line p-events-bottom__line1">
+                        <img src="images/line-1.svg" alt="line">
+                    </div>
+                    <div class="p-events-bottom__line p-events-bottom__line2">
+                        <img src="images/line-2.svg" alt="line">
+                    </div>
+                </section>        
+
+            </main>
+
+            <!--footer-->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer__content col-lg-12 col-md-12 col-sm-12">
+                            <div class="footer__top">
+                                <a href="index.html" class="footer__logo">
+                                    <img src="images/logo_footer.svg" alt="logo">
+                                </a>
+                                <ul class="menu">
+                                    <li class="menu__item"><a href="index.html">Accueil</a></li>
+                                    <li class="menu__item"><a href="actuality.html">Actualités</a></li>
+                                    <li class="menu__item active"><a href="events.html">Évènement</a></li>
+                                    <li class="menu__item"><a href="offers.html">Offres</a></li>
+                                    <li class="menu__item"><a href="about.html">A propos</a></li>
+                                    <li class="menu__item"><a href="contacts.html">Contacts</a></li>
+                                </ul>
+                                <div class="footer__info">
+                                    <div class="footer__contact">
+                                        <a href="tel:0022995959595"><span class="mdi mdi-phone-in-talk"></span>+229 95-95-95-95</a>
+                                        <a href="mailto:email@gmail.com"><span class="mdi mdi-email-outline"></span>email@gmail.com</a>
+                                    </div>
+                                    <div class="footer__rs">
+                                        <a href="#"><span class="mdi mdi-facebook"></span></a>
+                                        <a href="#"><span class="mdi mdi-instagram"></span></a>
+                                        <a href="#"><span class="mdi mdi-twitter"></span></a>
+                                        <a href="#"><span class="mdi mdi-youtube"></span></a>
+                                        <a href="#"><span class="mdi mdi-linkedin"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer__center">
+                                <form method="POST" action="#">
+                                    <input type="text" name="newsletter" placeholder="Laisser nous votre e-mail pour ne rien rater">
+                                    <button type="button">Envoyer</button>
+                                </form>
+                                <div class="footer__btn"><a href="#">consultation</a></div>
+                            </div>
+                            <div class="footer__bottom">
+                                <p>
+                                    Copyright © Groupe empire, 2021 - Realisé par <a href="#">KevinpackCode</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="wave" src="images/wave.svg" alt="wave">
+            </footer>
+
+        </div>
+
+        <!--bootstrap js-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+        <!--aos js-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!--slick js-->
+        <script src="./libs/slik/js/slick.min.js"></script>
+        <!--script js-->
+        <script src="./js/script.js"></script>
+    </body>
+</html>

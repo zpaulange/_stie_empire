@@ -1,0 +1,54 @@
+/*------------------------------
+form
+------------------------------*/
+.form{
+    display:block;
+    &__item{
+        input, textarea{
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.01);
+            border-radius: 6px;
+            font-size:14px;
+            color:$noir3;
+            background-color:$blanc;
+            &::-webkit-input-placeholder{
+                color:$noir3;
+                font-size:14px;
+            }
+            &::-moz-input-placeholder{
+                color:$noir3;
+                font-size:14px;
+            }
+            &::placeholder{
+                color:$noir3;
+                font-size:14px;
+            }
+        }
+        textarea{
+            min-height:130px;
+            padding-top:10px;
+        }
+        &:last-child{
+            text-align: center;
+            button{
+                @include button($pd:10px 50px);
+                background-color:$noir3;
+                font-family: "Montserrat-Regular", sans-serif;
+                font-weight: 600;
+                font-size:16px;
+                border-color:$noir3;
+                &:hover{
+                    background-color: $orange;
+                    box-shadow: none;
+                    border-color:$orange;
+                }
+            }
+        }
+    }
+    & &__item + &__item{
+        margin-top:20px;
+    }
+}
+
+/*------------------------------
+end form
+------------------------------*/

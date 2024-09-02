@@ -1,0 +1,201 @@
+/*------------------------------
+GENERAL
+------------------------------*/
+@charset "UTF-8";
+//AbyssinicaSIL
+@font-face {
+    font-family: AbyssinicaSIL;
+    src: local("AbyssinicaSIL"), url(fonts/abyssinica-sil/AbyssinicaSIL-R.ttf); 
+}
+//Aclonica
+@font-face {
+    font-family: Aclonica-Regular;
+    src: local("Aclonica-Regular"), url(fonts/Aclonica/Aclonica-Regular.ttf); 
+}
+//Aladin
+@font-face {
+    font-family: Aladin-Regular;
+    src: local("Aladin-Regular"), url(fonts/Aladin/Aladin-Regular.ttf); 
+}
+//AlexBrush
+@font-face {
+    font-family: AlexBrush-Regular;
+    src: local("AlexBrush-Regular"), url(fonts/Alex_Brush/AlexBrush-Regular.ttf); 
+}
+//Arizonia
+@font-face {
+    font-family: Arizonia-Regular;
+    src: local("Arizonia-Regular"), url(fonts/Arizonia/Arizonia-Regular.ttf); 
+}
+//Calistoga
+@font-face {
+    font-family: Calistoga-Regular;
+    src: local("Calistoga-Regular"), url(fonts/Calistoga/Calistoga-Regular.ttf); 
+}
+//Damion
+@font-face {
+  font-family: Damion-Regular;
+  src: local("Damion-Regular"), url(fonts/Damion/Damion-Regular.ttf); 
+}
+//GoblinOne
+@font-face {
+    font-family: GoblinOne-Regular;
+    src: local("GoblinOne-Regular"), url(fonts/Goblin_One/GoblinOne-Regular.ttf); 
+}
+//Montserrat
+@font-face {
+    font-family: Montserrat-Regular;
+    src: local("Montserrat-Regular"), url(fonts/Montserrat/Montserrat-Regular.ttf); 
+}
+@font-face {
+    font-family: Montserrat-Medium;
+    src: local("Montserrat-Medium"), url(fonts/Montserrat/Montserrat-Medium.ttf); 
+}
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: local("Montserrat-SemiBold"), url(fonts/Montserrat/Montserrat-SemiBold.ttf); 
+}
+
+* {
+    position: relative;
+    z-index: 5;
+    outline: none;
+    font-size: 1rem;
+    font-family: "Montserrat-Medium", sans-serif;
+    line-height: 1.5rem;
+    color: $noir;
+}
+  
+body{
+  overflow-x: hidden;
+}
+
+a{
+  transition:all .3s ease-in;
+}
+
+a:hover, a:focus, a:active {
+  text-decoration: none; 
+}
+
+button{
+  transition:all .3s ease-in;
+  border:transparent;
+  &:focus{
+    outline:none;
+  }
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0; 
+}
+
+li {
+  position: relative;
+  list-style: none; 
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto; 
+}
+
+p {
+  margin: 0 0 10px;
+  overflow: hidden;
+  display: block; 
+}
+
+h1.h1, h1{
+    font-size: 35px;
+    font-family: 'Aladin-Regular;', sans-serif;
+    text-transform: capitalize;
+    @media (min-width:992px){
+      font-size: 45px;
+    }
+}
+  
+h2.h2, h2{
+    font-size: 30px;
+    font-family: 'Calistoga-Regular', sans-serif;
+    @media (min-width:992px){
+      font-size: 35px;
+    }
+}
+  
+h3.h3, h3{
+    font-size: 16px;
+    font-family: 'GoblinOne-Regular', sans-serif;
+    @media (min-width:992px){
+      font-size: 28px;
+    }
+}
+
+h4.h4, h4{
+    font-size: 16px;
+    font-family: 'Aclonica-Regular', sans-serif;
+}
+
+input, textarea{
+    padding:0 15px;
+    display:block;
+    width:100%;
+    border:transparent;
+}
+
+input{
+  height:45px;
+}
+
+.wrapper{
+    display:flex;
+    flex-direction: column;
+    overflow:hidden;
+}
+  
+.main{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    min-height:calc(100vh - (81px + 279px));
+    z-index:-1;
+}
+
+.bg-cendre{
+  background-color:$cendre2;
+}
+
+//slick
+.slick-dots{
+	position: absolute;
+	display: flex;
+  position: absolute;
+	bottom: 15px;
+	justify-content: center;
+  z-index: 10;
+  width:100%;
+}
+.slick-dots>li{
+    margin-right: 8px;
+}
+.slick-dots>li>button{
+    font-size:0;
+    width: 15px;
+    height: 15px;
+    line-height: 13px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0;
+    border:transparent;
+    background-color:$blanc;  
+}
+.slick-dots>li.slick-active>button{
+    background-color:$orange;
+}
+.slick-dots>li>button:before{
+	display: none;
+}
+/*------------------------------
+end GENERAL
+------------------------------*/

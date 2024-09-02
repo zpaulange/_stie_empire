@@ -1,0 +1,126 @@
+/*==== contact ====>*/
+/*------------------------------
+contacts
+------------------------------*/
+.contact{
+    background-color:$cendre2;
+    @media (min-width: 992px){
+        &:before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:0;
+            height:100%;
+            //width:calc(100% - 885px);
+            width:41%;
+            background-color:$blanc;
+            box-shadow: 4px 0px 60px rgba(0, 0, 0, 0.15);
+        }
+    }
+    @media (min-width:1200px){
+        &:before{
+            width:35%;
+        }
+    }
+    &__content{
+        padding-top:60px;
+        padding-bottom: 60px;
+        @media (min-width: 992px){
+            @include flex($wrap:nowrap, $align:start);
+        }
+    }
+    &__left{
+        text-align:center;
+        @media (min-width: 992px){
+            text-align:left;
+        }
+    }
+    &__info{
+        margin-top:40px;
+        margin-bottom:28px;
+        @include flex($justify:space-around);
+        width:100%;
+        a{
+            padding:10px;
+            font-size:14px;
+            color:$noir3;
+            background-color:$blanc;
+            box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            @include flex($wrap:nowrap, $justify:start);
+            width: max-content;
+            margin-bottom:18px;
+            span{
+                margin-right:10px;
+                color:$orange;
+                font-size: 1.5rem;
+            }
+            @media (min-width: 992px){
+                text-align:left;
+                width:100%;
+                margin-bottom:0
+                & + a{
+                    margin-top:18px;
+                }
+            }
+            @media (max-width:440px){
+                width:100%;
+            }
+        }
+        @media (min-width: 992px){
+            width:275px;
+        }
+    }
+    &__rs{
+        &list{
+            @include flex($wrap:nowrap, $justify:center);
+            margin-top:10px;
+            a{
+                @include flex($wrap:nowrap, $justify:center);
+                height:35px;
+                width:35px;
+                border-radius:10px;
+                margin-right: 10px;
+                background-color:$noir3;
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1), 0px 4px 4px rgba(0, 0, 0, 0.15);
+                &:last-child{
+                    margin-right:0;
+                }
+                span{
+                    color:$blanc;
+                    font-size: 1.4rem;
+                    transition:all .3s ease-in;
+                }
+                &:hover{
+                    //border:transparent;
+                    span{
+                        font-size: 2rem;
+                    }
+                }
+            }
+            @media (min-width: 992px){
+                justify-content: start;
+            }
+
+        }
+    }
+    &__right{
+        margin-top:50px;
+        p{
+            text-align:center;
+            font-size:18px;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom:25px;
+            color:$noir2;
+        }
+        @media (min-width: 992px){
+            width:calc(100% - 420px);
+            margin-top:0;
+        }
+    }
+}
+
+/*------------------------------
+end contacts
+------------------------------*/

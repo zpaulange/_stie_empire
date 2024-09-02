@@ -1,0 +1,117 @@
+/*------------------------------
+sidebar
+------------------------------*/
+.sidebar{
+    max-width: 250px;
+    width:250px;
+    overflow: hidden;
+    @media (max-width:991px){
+        max-width: 75%;
+        width:75%;
+        position: fixed;
+        left:0;
+        top:80px;
+        z-index: 10;
+        height:calc(100vh - 81px);
+        transform: translateX(-1000px);
+        transition:all .5s ease-in-out;
+        &.active{
+            transform: translateX(0);
+        }
+        &__content{
+            height:100% !important;
+        }
+        &__list{
+            height:100%;
+            overflow-y: scroll;
+            &::-webkit-scrollbar{
+                width:4px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color:rgb(182, 172, 172);
+                ;
+                border-radius:10px;
+            }
+        }
+    }
+    &__title{
+        color:$blanc;
+        background-color:$noir3;
+        font-size:18px;
+        font-weight: 700;
+        font-family: 'Montserrat-Regular', sans-serif;
+        text-align: left;
+        padding:10px 45px 10px 15px;
+        a{
+            position: absolute;
+            top:50%;
+            right:15px;
+            transform:translateY(-50%);
+            span{
+                color:$blanc;
+                font-size:1.8rem;
+                visibility: visible;
+                @media (min-width:992px){
+                    visibility: hidden;
+                }
+            }
+            &:hover>span{
+                color:$orange;
+            }
+        }
+    }
+    &__list{
+        background-color:$cendre2;
+        padding:0 15px;
+        & li + li{
+            border-top:1px solid #ddd;
+        }
+    }
+    &__item{
+        a{
+            font-family: 'Damion-Regular',sans-serif;
+            font-size:20px;
+            font-weight: 400;
+            display:block;
+            padding:12px 0;
+            color:$noir3;
+            @include flex($wrap:nowrap,$align:start);
+            line-height: 20px;
+            span{
+                color:$noir3;
+                font-size: 14px;
+                font-weight: 600;
+                margin-left:5px;
+                transition:all .3s ease-in;
+            }
+            &:hover{
+                color:$orange;
+                span{
+                    color:$orange;
+                }
+            }
+        }
+        &.active a{
+            color:$orange;
+            span{
+                color:$orange;
+            }
+        }
+    }
+}
+
+//btn
+.btn-menu-sidebar{
+    display: inline-block;
+    margin-right: 5px;
+    span{
+        font-size: 2rem;
+    }
+    @media (min-width:992px){
+        display:none;
+    }
+}
+
+/*------------------------------
+end sidebar
+------------------------------*/

@@ -1,0 +1,145 @@
+/*------------------------------
+header
+------------------------------*/
+.header{
+    background-color:$noir1;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1), 0px 4px 30px rgba(0, 0, 0, 0.25);
+    z-index:6;
+    &-fixed{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+    }
+    &__content{
+        @include flex;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+    &__left{
+        width:122px;
+    }
+    &__center{
+        @media (max-width:991px){
+            position:fixed;
+            left: 0;
+            top: 59px;
+            width: 100%;
+            height:100vh;
+            padding: 50px 15px 15px 15px;
+            z-index: 6;
+            display: block;
+            margin-top: 22px;
+            visibility: hidden;
+            opacity: 0;
+            background-color:$noir2;
+            transform: translate3d(0, 30px, 0);
+            transition: 0.35s all cubic-bezier(0.65, 0.05, 0.36, 1);
+            .menu{
+                flex-direction:column;
+                &__item{
+                    a{
+                        margin-right:0;
+                        margin-bottom:25px;
+                        font-size:1.5rem;
+                        &:before, &:after{
+                            display:none;
+                        }
+                        &:hover{
+                            color:$orange;
+                        }
+                    }
+                    &.active a{
+                        color:$orange;
+                    }
+                }
+            }
+            &.active{
+                opacity: 1;
+                visibility: visible;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+    &__right{
+        display: none;
+        a{
+            @include button( $cl:$blanc, $rd:35px);
+            border-color:$blanc;
+            text-transform: uppercase;
+            background-color:transparent;
+            font-size:14px;
+            font-family: "Montserrat-SemiBold", sans-serif;
+            &:hover{
+                background-color:$orange;
+                border-color:$orange;
+                box-shadow: none;
+            }
+        }
+        @media (min-width:992px){
+            display:block;
+        }
+    }
+    &__btnClose{
+        display: inline-block;
+        height:40px;
+        width:40px;
+        span{
+           display:block;
+           position:absolute;
+           height:3px;
+           width: 35px;
+           background-color: $blanc;
+           left:50%;
+           top:50%;
+           transform:translate(-50%, -50%);
+           transition:all .3s ease-in;
+           &:before, &:after{
+               content:"";
+               position:absolute;
+               height:3px;
+               width: 35px;
+               transition:all .3s ease-in;
+               background-color:$blanc;
+               left:50%;
+               transition:all .3s ease-in;
+           }
+           &:before{
+               top:-8px;
+               transform:translateX(-50%);
+           }
+           &:after{
+                bottom:-8px;
+                transform:translateX(-50%);
+            }
+        }
+        &:hover {
+            span:before{
+                top:-6px;
+            }
+            span:after{
+                bottom:-6px;
+            }
+        }
+        &.active{
+            span{
+                background-color:transparent;
+                &:before{
+                    top:0;
+                    transform:translateX(-50%) rotate(45deg);
+                }
+                &:after{
+                    bottom:0;
+                    transform:translateX(-50%) rotate(-45deg);
+                }
+            }
+        }
+        @media (min-width:992px){
+            display:none;
+        }
+    }
+}
+
+/*------------------------------
+end header
+------------------------------*/
